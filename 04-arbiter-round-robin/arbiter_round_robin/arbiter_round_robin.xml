@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-02-18T19:41:31" hostname="tabrez-VivoBook-ASUSLaptop-X513UA-KM513UA" package="arbiter_round_robin" id="0" name="default" tests="3" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in arbiter_round_robin at arbiter_round_robin.v:100.25-100.52" time="0" type="ASSERT" location="arbiter_round_robin.v:100.25-100.52" id="_witness_.check_assert_arbiter_round_robin_v_100_10">
+</testcase>
+<testcase classname="default" name="Property ASSERT in arbiter_round_robin at arbiter_round_robin.v:94.13-94.40" time="0" type="ASSERT" location="arbiter_round_robin.v:94.13-94.40" id="_witness_.check_assert_arbiter_round_robin_v_94_5">
+</testcase>
+<testcase classname="default" name="Property ASSERT in arbiter_round_robin at arbiter_round_robin.v:99.25-99.52" time="0" type="ASSERT" location="arbiter_round_robin.v:99.25-99.52" id="_witness_.check_assert_arbiter_round_robin_v_99_8">
+</testcase>
+<system-out>SBY 19:41:31 [arbiter_round_robin] Removing directory '/home/tabrez/git/FPGA-learning-log/04-arbiter-round-robin/arbiter_round_robin'.
+SBY 19:41:31 [arbiter_round_robin] Copy '/home/tabrez/git/FPGA-learning-log/04-arbiter-round-robin/arbiter_round_robin.v' to '/home/tabrez/git/FPGA-learning-log/04-arbiter-round-robin/arbiter_round_robin/src/arbiter_round_robin.v'.
+SBY 19:41:31 [arbiter_round_robin] engine_0: smtbmc
+SBY 19:41:31 [arbiter_round_robin] base: starting process &quot;cd arbiter_round_robin/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 19:41:31 [arbiter_round_robin] base: finished (returncode=0)
+SBY 19:41:31 [arbiter_round_robin] prep: starting process &quot;cd arbiter_round_robin/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 19:41:31 [arbiter_round_robin] prep: finished (returncode=0)
+SBY 19:41:31 [arbiter_round_robin] smt2: starting process &quot;cd arbiter_round_robin/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 19:41:31 [arbiter_round_robin] smt2: finished (returncode=0)
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: starting process &quot;cd arbiter_round_robin; yosys-smtbmc --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: starting process &quot;cd arbiter_round_robin; yosys-smtbmc --presat --unroll -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Trying induction in step 19..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Trying induction in step 18..
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: ##   0:00:00  Status: passed
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: finished (returncode=0)
+SBY 19:41:31 [arbiter_round_robin] engine_0.induction: Status returned by engine for induction: pass
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: finished (returncode=0)
+SBY 19:41:31 [arbiter_round_robin] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 19:41:31 [arbiter_round_robin] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:41:31 [arbiter_round_robin] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:41:31 [arbiter_round_robin] summary: engine_0 (smtbmc) returned pass for basecase
+SBY 19:41:31 [arbiter_round_robin] summary: engine_0 (smtbmc) returned pass for induction
+SBY 19:41:31 [arbiter_round_robin] summary: engine_0 did not produce any traces
+SBY 19:41:31 [arbiter_round_robin] summary: successful proof by k-induction.
+SBY 19:41:31 [arbiter_round_robin] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
