@@ -1,0 +1,14 @@
+# Clock
+set_io clk 35
+
+# Inputs (Requests)
+# req[0] mapped to Switch A0 (Pin 6) - Highest Priority
+set_io req[0] 6
+# req[1] mapped to Switch A1 (Pin 4) - Lowest Priority
+set_io req[1] 4
+
+# Outputs (Grants)
+# gnt[0] mapped to LED D0 (Pin 31) - Indicates Request 0 Granted
+set_io gnt[0] 31
+# gnt[1] mapped to LED D1 (Pin 32) - Indicates Request 1 Granted
+set_io gnt[1] 32

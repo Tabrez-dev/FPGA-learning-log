@@ -1,0 +1,8 @@
+# running in arbiter/src/
+read -formal arbiter.v
+prep -top arbiter
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

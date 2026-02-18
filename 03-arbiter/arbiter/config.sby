@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal arbiter.v
+prep -top arbiter
+
+[files]
+arbiter.v
