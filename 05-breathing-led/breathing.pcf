@@ -1,0 +1,7 @@
+# --- Breathing LED (PWM) Constraints ---
+
+# The internal oscillator (SB_HFOSC) doesn't need a physical pin constraint.
+# We only have one output in our Verilog module: 'led'.
+
+# Map the 'led' output to LED D0 (Pin 31)
+set_io led 31

@@ -1,0 +1,31 @@
+timestamp: "22110645402"
+arch: ICE40
+fpga_info {
+  fpga_id: "ice40up5k-sg48"
+  part_num: "ICE40UP5K-SG48"
+  size: "5k"
+  ice40 {
+    type: "up5k"
+    pack: "sg48"
+  }
+}
+environment {
+  platform_id: "linux-x86-64"
+  is_windows: false
+  terminal_mode: FORCE_TERMINAL
+  theme_name: "light"
+  debug_level: 0
+  yosys_path: "/home/tabrez/.apio/packages/oss-cad-suite/share/yosys"
+  trellis_path: "/home/tabrez/.apio/packages/oss-cad-suite/share/trellis"
+  scons_shell_id: "bash"
+}
+apio_env_params {
+  env_name: "default"
+  board_id: "soan-papdi"
+  top_module: "breathing"
+}
+target {
+  upload {
+    programmer_cmd: "dfu-util -d 1D50:6146 -a 0 -D $SOURCE"
+  }
+}
