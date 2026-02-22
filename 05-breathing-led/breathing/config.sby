@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 50
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -D FORMAL breathing.v
+prep -top breathing
+
+[files]
+breathing.v

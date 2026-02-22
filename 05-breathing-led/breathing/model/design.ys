@@ -1,0 +1,8 @@
+# running in breathing/src/
+read_verilog -formal -D FORMAL breathing.v
+prep -top breathing
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

@@ -1,0 +1,131 @@
+SBY 12:03:51 [breathing] Removing directory '/home/tabrez/git/FPGA-learning-log/05-breathing-led/breathing'.
+SBY 12:03:51 [breathing] Copy '/home/tabrez/git/FPGA-learning-log/05-breathing-led/breathing.v' to '/home/tabrez/git/FPGA-learning-log/05-breathing-led/breathing/src/breathing.v'.
+SBY 12:03:51 [breathing] engine_0: smtbmc yices
+SBY 12:03:51 [breathing] base: starting process "cd breathing/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 12:03:51 [breathing] base: Warning: Wire breathing.\clk is used but has no driver.
+SBY 12:03:51 [breathing] base: finished (returncode=0)
+SBY 12:03:51 [breathing] prep: starting process "cd breathing/model; yosys -ql design_prep.log design_prep.ys"
+SBY 12:03:51 [breathing] prep: finished (returncode=0)
+SBY 12:03:51 [breathing] smt2: starting process "cd breathing/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 12:03:51 [breathing] smt2: finished (returncode=0)
+SBY 12:03:51 [breathing] engine_0.basecase: starting process "cd breathing; yosys-smtbmc -s yices --presat --unroll --noprogress -t 50  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 12:03:51 [breathing] engine_0.induction: starting process "cd breathing; yosys-smtbmc -s yices --presat --unroll -i --noprogress -t 50  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Trying induction in step 50..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Trying induction in step 49..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Trying induction in step 48..
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 12:03:51 [breathing] engine_0.induction: ##   0:00:00  Status: passed
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 12:03:51 [breathing] engine_0.induction: finished (returncode=0)
+SBY 12:03:51 [breathing] engine_0.induction: Status returned by engine for induction: pass
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 12:03:51 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 20..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 20..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 21..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 21..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 22..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 22..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 23..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 23..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 24..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 24..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 25..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 25..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 26..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 26..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 27..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 27..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 28..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 28..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 29..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 29..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 30..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 30..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 31..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 31..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 32..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 32..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 33..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 33..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 34..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 34..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 35..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 35..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 36..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 36..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 37..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 37..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 38..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 38..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 39..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 39..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 40..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 40..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 41..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 41..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 42..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 42..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 43..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 43..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 44..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 44..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 45..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 45..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 46..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 46..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 47..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 47..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 48..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 48..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assumptions in step 49..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Checking assertions in step 49..
+SBY 12:03:52 [breathing] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 12:03:52 [breathing] engine_0.basecase: finished (returncode=0)
+SBY 12:03:52 [breathing] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 12:03:52 [breathing] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 12:03:52 [breathing] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 12:03:52 [breathing] summary: engine_0 (smtbmc yices) returned pass for basecase
+SBY 12:03:52 [breathing] summary: engine_0 (smtbmc yices) returned pass for induction
+SBY 12:03:52 [breathing] summary: engine_0 did not produce any traces
+SBY 12:03:52 [breathing] summary: successful proof by k-induction.
+SBY 12:03:52 [breathing] DONE (PASS, rc=0)
