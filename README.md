@@ -17,7 +17,8 @@ Also, just a heads-up on the npm side of things. I had to use --legacy-peer-deps
 
 My first dive into sequential logic. The DFF is the fundamental building block of state in digital design—it captures input on a clock edge and holds it until the next cycle. This schematic shows how a single bit of memory is built from basic gates.
 
-![DFF Schematic](02-logic-gates/schematic_dff)
+<img width="787" height="353" alt="image" src="https://github.com/user-attachments/assets/47730a5c-3180-4785-afde-7646f5346357" />
+
 
 ---
 
@@ -25,7 +26,7 @@ My first dive into sequential logic. The DFF is the fundamental building block o
 
 When multiple masters compete for a shared resource, who wins? This fixed-priority arbiter ensures only one request is granted at a time, with higher-priority inputs always winning ties. Essential for bus contention management in SoC designs.
 
-![Arbiter Schematic](03-arbiter-fixed/arbiter_schematic)
+<img width="749" height="352" alt="image" src="https://github.com/user-attachments/assets/39a71a9d-2f09-4333-aa96-15136098a413" />
 
 ---
 
@@ -33,4 +34,4 @@ When multiple masters compete for a shared resource, who wins? This fixed-priori
 
 A "breathing" LED that fades in and out smoothly no CPU, just pure hardware. Uses two counters (8-bit PWM carrier + 27-bit breath timer) and a clever MSB trick to generate a triangle wave. The comparator then converts this to PWM duty cycle. Zero software, 100% silicon.
 
-![Breathing LED Schematic](05-breathing-led/breathing_schematic)
+<img width="723" height="552" alt="image" src="https://github.com/user-attachments/assets/d13be6e8-9a34-49c1-9ab9-7343e1147f04" />
